@@ -1,0 +1,60 @@
+/*  ***********ROOT CODE *********** */
+/* @import url("https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap"); */
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid yellowgreen;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(blue, red, green, var(--navcol));
+  border-radius: 10px;
+  transition: 5s ease;
+}
+
+
+:root {
+  --back: #e3e6f3;
+  --col: #1a1a1a;
+  --border: #7e96ff;
+  --navcol: rgb(31, 101, 253);
+  --hover: green;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+section,
+footer {
+  text-align: center;
+  padding: 30px 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+i {
+  color: var(---navcol);
+}
