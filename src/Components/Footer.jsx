@@ -1,6 +1,7 @@
 import React from 'react'
 import applestor from '../Image/pay/app.jpg'
 import playstor from '../Image/pay/play.jpg'
+import PayImage from '../Image/pay/pay.png'
 
 
 
@@ -46,7 +47,7 @@ export default function Footer() {
                     <img src={playstor} alt="Download from Google Play Store" />
                 </div>
                 <p>Secure Payment Getway</p>
-                <img src="img/pay/pay.png" alt="Download from Google Play Store" />
+                <img src={PayImage} alt="Download from Google Play Store" />
             </div>
         </footer>
     )

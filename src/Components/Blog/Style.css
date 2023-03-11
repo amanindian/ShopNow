@@ -1,0 +1,94 @@
+/* ****************************BLOG******************************** */
+#blog-header {
+  background: url(../../Image/banner/b19.jpg);
+  background-size: cover;
+}
+
+.blog-box {
+  display: flex;
+  border: 1px solid #ccc;
+  margin: 25px 20px;
+}
+
+.blog-img {
+  min-width: 30%;
+  min-height: 30vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.blog-title {
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.blog-desc {
+  font-size: 20px;
+}
+
+#blog-input {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: linear-gradient(60deg, red, blue, green);
+  color: #fff;
+  /* animation: akp 1s ease-in-out 1s infinite forwards; */
+}
+
+label {
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+#Blog-title,
+#Blog-image,
+#Blog-description {
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+#Blog-description {
+  resize: vertical;
+}
+
+#Blog-Submit {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--navcol);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#Blog-Submit:hover {
+  background-color: var(--hover);
+}
+
