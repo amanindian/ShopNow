@@ -1,12 +1,12 @@
 import React from "react";
-import f1 from "../Image/products/f1.jpg";
-import f2 from "../Image/products/f2.jpg";
-import f3 from "../Image/products/f3.jpg";
-import f4 from "../Image/products/f4.jpg";
-import f5 from "../Image/products/f5.jpg";
-import f6 from "../Image/products/f6.jpg";
-import f7 from "../Image/products/f7.jpg";
-import f8 from "../Image/products/f8.jpg";
+import f1 from "../../Image/products/f1.jpg";
+import f2 from "../../Image/products/f2.jpg";
+import f3 from "../../Image/products/f3.jpg";
+import f4 from "../../Image/products/f4.jpg";
+import f5 from "../../Image/products/f5.jpg";
+import f6 from "../../Image/products/f6.jpg";
+import f7 from "../../Image/products/f7.jpg";
+import f8 from "../../Image/products/f8.jpg";
 import { Link } from "react-router-dom";
 
 export default function Products1({ ShowProduct }) {

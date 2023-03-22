@@ -6,25 +6,31 @@
 
 .blog-box {
   display: flex;
+  flex-direction: column;
   border: 1px solid #ccc;
   margin: 25px 20px;
 }
 
 .blog-img {
   min-width: 30%;
+  max-width: 40vw;
   min-height: 30vh;
+  max-height: 90vh;
   background-size: cover;
   background-position: center center;
 }
 
 .blog-content {
   display: flex;
-  flex-direction: column;
   text-align: start;
   justify-content: flex-start;
   padding: 20px;
+  border: 1px dashed rgb(81, 0, 255);
+  margin: 1px 0;
 }
-
+.blog-content div {
+  width: 40vw;
+}
 .blog-title {
   margin-bottom: 5px;
   font-size: 30px;
@@ -92,3 +98,20 @@ label {
   background-color: var(--hover);
 }
 
+
+@media (max-width: 945px) {
+  
+  .blog-box {
+    flex-direction: column;
+  }
+
+  #blog-input {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .blog-content {
+    padding: 20px 0;
+  }
+
+}

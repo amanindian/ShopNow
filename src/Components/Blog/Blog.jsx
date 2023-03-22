@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
-import BlogHeader from './Blog/BlogHeader'
-import BlogData from './Blog/BlogData'
-import BlogForm from './Blog/BlogForm'
+import BlogHeader from './BlogHeader'
+import BlogData from './BlogData'
+import BlogForm from './BlogForm'
 
-export default function Blog() {
-
+const Blog = () => {
     const [BlogTitle, setBlogTitle] = useState("")
     const [BlogDescription, setBlogDescription] = useState("")
-    // const [BlogImage, setBlogImage] = useState(null)
+    const [BlogImage, setBlogImage] = useState(null)
     const [AllBlogData, setAllBlogData] = useState([])
 
     const BlogSave = (event) => {
@@ -16,23 +15,19 @@ export default function Blog() {
         NewDataList.push({
             BlogDescription: BlogDescription,
             BlogTitle: BlogTitle,
-            // BlogImage:BlogImage
+            BlogImage: BlogImage
         })
         setAllBlogData(NewDataList)
         console.log(AllBlogData)
     }
 
-
-
-
-
-
-
     return (
         <>
             <BlogHeader />
             <BlogData AllBlogData={AllBlogData} />
-            <BlogForm setBlogDescription={setBlogDescription} setBlogTitle={setBlogTitle} BlogSave={BlogSave} />
+            <BlogForm setBlogDescription={setBlogDescription} setBlogTitle={setBlogTitle} BlogSave={BlogSave} setBlogImage={setBlogImage} />
         </>
     )
 }
+
+export default Blog

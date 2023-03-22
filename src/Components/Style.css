@@ -113,8 +113,6 @@ li a:hover::after {
   padding-bottom: 10px;
 }
 
-/* Feature Section */
-
 /*  ****************FETURES*********** */
 #features {
   display: flex;

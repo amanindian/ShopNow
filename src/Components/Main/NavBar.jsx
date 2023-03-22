@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./Style.css";
+import "../Style.css";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
@@ -22,8 +22,8 @@ export default function NavBar() {
                     <li><Link className="active" onClick={CloseNav} to="/">Home </Link></li>
                     <li><Link to="/Shop" onClick={CloseNav}>Shop</Link></li>
                     <li><Link to="/Blogs" onClick={CloseNav}>Blog </Link></li>
-                    <li><Link to="/" onClick={CloseNav}>About</Link></li>
-                    <li><Link to="/" onClick={CloseNav}>Contact</Link></li>
+                    <li><Link to="/About" onClick={CloseNav}>About</Link></li>
+                    <li><Link to="/Contact" onClick={CloseNav}>Contact</Link></li>
                     <li>
                         <Link to="/" onClick={CloseNav}>
                             <i title="Cart" className="fa-solid fa-cart-shopping" />

@@ -1,15 +1,14 @@
 import React from 'react'
-import applestor from '../Image/pay/app.jpg'
-import playstor from '../Image/pay/play.jpg'
-import PayImage from '../Image/pay/pay.png'
-
-
+import { Link } from 'react-router-dom'
+import applestor from '../../Image/pay/app.jpg'
+import playstor from '../../Image/pay/play.jpg'
+import PayImage from '../../Image/pay/pay.png'
 
 export default function Footer() {
     return (
         <footer id="footer">
             <div className="col">
-                <a className="icon" href="/">ShopNow.com</a>
+                <Link className="icon" to="/">ShopNow.com</Link>
                 <h4>Contact</h4>
                 <p><strong>Address:</strong>Siwan, BIhar, India</p>
                 <p><strong>Phone:</strong>+918002579962</p>
