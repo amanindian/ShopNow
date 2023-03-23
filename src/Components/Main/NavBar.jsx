@@ -25,7 +25,7 @@ export default function NavBar() {
                     <li><Link to="/About" onClick={CloseNav}>About</Link></li>
                     <li><Link to="/Contact" onClick={CloseNav}>Contact</Link></li>
                     <li>
-                        <Link to="/" onClick={CloseNav}>
+                        <Link to="/Cart" onClick={CloseNav}>
                             <i title="Cart" className="fa-solid fa-cart-shopping" />
                         </Link>
                     </li>

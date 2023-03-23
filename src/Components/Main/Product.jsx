@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export default function Product({ ClickedData }) {
+export default function Product({ ClickedData, setNewCartProduct }) {
+
+    const [CartProduct, setCartProduct] = useState(() => {
+        if (localStorage.CartProduct) {
+            return JSON.parse(localStorage.CartProduct);
+        } else {
+            return [];
+        }
+    });
+
+    useEffect(() => {
+        localStorage.CartProduct = JSON.stringify(CartProduct);
+        setNewCartProduct(CartProduct)
+    }, [CartProduct]);
+
+    const HendleAddToCart = (event) => {
+        let newCartProduct = [...CartProduct];
+        console.log(newCartProduct);
+        newCartProduct.push({
+            ProPrice: event.target.getAttribute("proprice"),
+            ProTitle: event.target.getAttribute("protitle")
+        });
+        setCartProduct(newCartProduct);
+    };
+
 
     return (
         <>
@@ -20,7 +44,7 @@ export default function Product({ ClickedData }) {
                         <option>Large</option>
                     </select>
                     <input type="number" defaultValue={1} name="ProQuantity" id="ProQuantity" />
-                    <button>Add To Cart</button>
+                    <button protitle={ClickedData.ProTitle} proprice={ClickedData.ProPrice} onClick={HendleAddToCart}>Add To Cart</button>
                     <h4>{ClickedData.ProTitle}</h4>
                     <span>{ClickedData.ProDescription}</span>
                 </div>

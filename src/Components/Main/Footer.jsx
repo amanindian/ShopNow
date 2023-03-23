@@ -6,7 +6,7 @@ import PayImage from '../../Image/pay/pay.png'
 
 export default function Footer() {
     return (
-        <footer id="footer">
+        <footer id="footer" className='fix-top'>
             <div className="col">
                 <Link className="icon" to="/">ShopNow.com</Link>
                 <h4>Contact</h4>

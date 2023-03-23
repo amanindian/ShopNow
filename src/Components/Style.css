@@ -205,9 +205,10 @@ li a:hover::after {
   color: rgb(255, 196, 119);
 }
 
-.pro a i {
+.pro  i {
   font-size: 25px;
   color: var(--navcol);
+  cursor: pointer;
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -216,7 +217,7 @@ li a:hover::after {
   background-color: #e8f6ea;
 }
 
-.pro a i:hover {
+.pro  i:hover {
   color: var(--hover);
 }
 
@@ -460,13 +461,13 @@ li a:hover::after {
 /* *******************************ABOUT*************************** */
 .page-header {
   color: #fff;
-  min-height: 150px;
-  height: 30vh;
+  min-height: 500px;
+  height: 40vh;
   background: url(../Image/about/banner.png);
 }
-#shop-header h2 {
+/* #shop-header h2 {
   margin: 10px;
-}
+} */
 
 /*    ******************SINGLE PRODUCT****************** */
 #prodetails {

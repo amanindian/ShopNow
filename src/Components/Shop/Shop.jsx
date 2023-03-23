@@ -1,8 +1,8 @@
-import React from 'react'
-import ShopBanner from "./ShopBanner"
-import Products1 from "../Main/Products1"
+import React, { useState, useEffect } from "react";
+import ShopBanner from "./ShopBanner";
+import Products1 from "../Main/Products1";
 
-export default function Shop({setClickedData}) {
+export default function Shop({ setClickedData, setNewCartProduct }) {
   const ShowProduct = (e) => {
     let Item = e.target;
     setClickedData({
@@ -19,14 +19,36 @@ export default function Shop({setClickedData}) {
     });
   };
 
+  const [CartProduct, setCartProduct] = useState(() => {
+    if (localStorage.CartProduct) {
+      return JSON.parse(localStorage.CartProduct);
+    } else {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.CartProduct = JSON.stringify(CartProduct);
+    setNewCartProduct(CartProduct);
+  }, [CartProduct]);
+
+  const HendleAddToCart = (event) => {
+    let Item = event.target;
+    let newCartProduct = [...CartProduct];
+    newCartProduct.push({
+      ProPrice: Item.parentElement.getElementsByClassName(`proprise`)[0]
+        .innerHTML,
+      ProTitle: Item.parentElement.getElementsByTagName("h5")[0].innerHTML,
+    });
+    setCartProduct(newCartProduct);
+  };
 
   return (
-
     <React.Fragment>
       <ShopBanner />
-      <Products1 ShowProduct={ShowProduct} />
+      <Products1 ShowProduct={ShowProduct} HendleAddToCart={HendleAddToCart} />
     </React.Fragment>
-  )
+  );
 }
 
 // <ShopBanner />

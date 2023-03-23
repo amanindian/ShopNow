@@ -1,0 +1,24 @@
+.TableHead{
+    font-size: 35px;
+    font-style: italic;
+}table {
+  width: 100%;
+}
+.ProTitle {
+  font-size: 25px;
+  font-style: italic;
+}
+.btn {
+  width: 33.3%;
+  height: 100%;
+  font-size: 25px;
+  height: 35px;
+  font-weight: bold;
+}
+.RemoveBtn {
+  font-size: 20px;
+  font-style: italic;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+}

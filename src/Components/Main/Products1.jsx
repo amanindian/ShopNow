@@ -1,68 +1,9 @@
 import React from "react";
-import f1 from "../../Image/products/f1.jpg";
-import f2 from "../../Image/products/f2.jpg";
-import f3 from "../../Image/products/f3.jpg";
-import f4 from "../../Image/products/f4.jpg";
-import f5 from "../../Image/products/f5.jpg";
-import f6 from "../../Image/products/f6.jpg";
-import f7 from "../../Image/products/f7.jpg";
-import f8 from "../../Image/products/f8.jpg";
 import { Link } from "react-router-dom";
+import { ProList1 as ProList } from "./item.js"
 
-export default function Products1({ ShowProduct }) {
-  let defaultdDes =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laborum aperiam adipisci amet suscipit, nulla dolores doloremque excepturi eos, earum provident. Inventore aut quas expedita dolor, pariatur cupiditate alias aperiam culpa, sunt ullam ab aliquam cumque officia! Est non consequuntur ipsam aperiam quo quas pariatur repellat, voluptates voluptatem quis. Sed?";
-  let defaultTitle = "This is title";
-  const ProList = [
-    {
-      Title: defaultTitle,
-      Image: f1,
-      Description: defaultdDes,
-      Amount: 789,
-    },
-    {
-      Title: defaultTitle,
-      Image: f2,
-      Description: defaultdDes,
-      Amount: 9999,
-    },
-    {
-      Title: defaultTitle,
-      Image: f3,
-      Description: defaultdDes,
-      Amount: 5005,
-    },
-    {
-      Title: defaultTitle,
-      Image: f4,
-      Description: defaultdDes,
-      Amount: 5090,
-    },
-    {
-      Title: defaultTitle,
-      Image: f5,
-      Description: defaultdDes,
-      Amount: 5008,
-    },
-    {
-      Title: defaultTitle,
-      Image: f6,
-      Description: defaultdDes,
-      Amount: 550,
-    },
-    {
-      Title: defaultTitle,
-      Image: f7,
-      Description: defaultdDes,
-      Amount: 500,
-    },
-    {
-      Title: defaultTitle,
-      Image: f8,
-      Description: defaultdDes,
-      Amount: 500,
-    },
-  ];
+export default function Products1({ ShowProduct,HendleAddToCart }) {
+ 
 
   return (
     <section id="product-1">
@@ -87,10 +28,7 @@ export default function Products1({ ShowProduct }) {
                 </div>
                 <h4 className="proprise">{element.Amount}</h4>
               </div>
-              <a href="/">
-                {" "}
-                <i className="fa-solid fa-cart-arrow-down" />
-              </a>
+              <i className="fa-solid fa-cart-arrow-down" onClick={HendleAddToCart} />
               <div className="proDesc" style={{ display: "none" }}>
                 {element.Description}
               </div>
