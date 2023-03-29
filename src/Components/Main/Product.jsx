@@ -1,54 +1,33 @@
-import React, { useState, useEffect } from "react";
-
-export default function Product({ ClickedData, setNewCartProduct }) {
-
-    const [CartProduct, setCartProduct] = useState(() => {
-        if (localStorage.CartProduct) {
-            return JSON.parse(localStorage.CartProduct);
-        } else {
-            return [];
-        }
-    });
-
-    useEffect(() => {
-        localStorage.CartProduct = JSON.stringify(CartProduct);
-        setNewCartProduct(CartProduct)
-    }, [CartProduct]);
-
-    const HendleAddToCart = (event) => {
-        let newCartProduct = [...CartProduct];
-        console.log(newCartProduct);
-        newCartProduct.push({
-            ProPrice: event.target.getAttribute("proprice"),
-            ProTitle: event.target.getAttribute("protitle")
-        });
-        setCartProduct(newCartProduct);
-    };
-
-
-    return (
-        <>
-            <section id="prodetails">
-                <div className="sing-product-image">
-                    <img src={ClickedData.ProImage} width="100%" id="MainImg" alt="/" />
-                </div>
-                <div id="single-pro-desc">
-                    <h6>Home / T-shirt</h6>
-                    <h4 id="about" >About</h4>
-                    <h2 id="MainPrice"> {ClickedData.ProPrice}</h2>
-                    <select>
-                        <option>Select Size</option>
-                        <option>XL</option>
-                        <option>XXL</option>
-                        <option>Small</option>
-                        <option>Large</option>
-                    </select>
-                    <input type="number" defaultValue={1} name="ProQuantity" id="ProQuantity" />
-                    <button protitle={ClickedData.ProTitle} proprice={ClickedData.ProPrice} onClick={HendleAddToCart}>Add To Cart</button>
-                    <h4>{ClickedData.ProTitle}</h4>
-                    <span>{ClickedData.ProDescription}</span>
-                </div>
-            </section>
-        </>
-    );
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Product.css";
+export default function Product({
+  index,
+  element,
+  HendleAddToCart,
+  ShowProduct,
+}) {
+  return (
+    <div className="pro" key={index}>
+      <Link to="/SingleProduct" onClick={ShowProduct}>
+        <img className="ProClickImg" src={element.Image} alt="/" />
+      </Link>
+      <div className="des">
+        <span>adidas</span>
+        <h5 className="about">{element.Title}</h5>
+        <div className="star">
+          <i className="fas fa-star" />
+          <i className="fas fa-star" />
+          <i className="fas fa-star" />
+          <i className="fas fa-star" />
+          <i className="fas fa-star" />
+        </div>
+        <h4 className="proprise">{element.Amount}</h4>
+      </div>
+      <i className="fa-solid fa-cart-arrow-down" onClick={HendleAddToCart} />
+      <div className="proDesc" style={{ display: "none" }}>
+        {element.Description}
+      </div>
+    </div>
+  );
 }

@@ -1,6 +1,7 @@
 import React from 'react'
+import "./Header.css"
 
-export default function Products1() {
+export default function Header() {
     return (
         <section id="hero">
             <h4>Trade-in-offer</h4>

@@ -4,7 +4,7 @@ export default function CartItem({ Product, Index, HendleRemoveItem }) {
   return (
     <tr>
       <th scope="row">{Index + 1}</th>
-      <td className="ProTitle" >{Product.ProTitle}</td>
+      <td className="ProTitle">{Product.ProTitle}</td>
       <td>{Product.ProPrice}</td>
       <th>
         <button className="btn">-</button>
@@ -13,11 +13,7 @@ export default function CartItem({ Product, Index, HendleRemoveItem }) {
       </th>
       <td>
         {" "}
-        <button
-          index={Index}
-          onClick={HendleRemoveItem}
-          className="RemoveBtn"
-        >
+        <button index={Index} onClick={HendleRemoveItem} className="RemoveBtn">
           Remove
         </button>
       </td>

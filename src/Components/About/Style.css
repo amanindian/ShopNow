@@ -2,6 +2,9 @@
 .page-header {
   min-height: 100px;
   height: 20vh;
+  color: #fff;
+  min-height: 150px;
+  background: url(../../Image/about/banner.png);
 }
 
 #about-header {
@@ -29,4 +32,40 @@
 #about-head div p,
 #about-head div abbr {
   margin: 15px 0;
+}
+
+@media (min-width: 946px) and (max-width: 1000px) {
+
+  #about-head {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-head img {
+    width: 100%;
+  }
+
+  #about-head div {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 945px) {
+
+  #about-head {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-head img {
+    width: 100%;
+  }
+
+  #about-head div {
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
 }

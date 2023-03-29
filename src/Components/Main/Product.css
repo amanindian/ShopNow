@@ -1,0 +1,63 @@
+/*  ******************PRODUCTS and NEW ARRIVALS******************    */
+.pro {
+  width: 23%;
+  min-width: 250px;
+  margin: 20px 0;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 15px;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+}
+
+.pro img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+.des h4 {
+  color: #088178;
+}
+
+.star {
+  font-size: 12px;
+  color: rgb(255, 196, 119);
+}
+
+.pro i {
+  font-size: 25px;
+  color: var(--navcol);
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 15px 10px 10px 10px;
+  border-radius: 50%;
+  background-color: #e8f6ea;
+}
+
+.pro i:hover {
+  color: var(--hover);
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+@media (max-width: 700px) {
+  .pro {
+    min-width:350px;
+  }
+}

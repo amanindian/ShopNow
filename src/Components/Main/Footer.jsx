@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import applestor from '../../Image/pay/app.jpg'
 import playstor from '../../Image/pay/play.jpg'
 import PayImage from '../../Image/pay/pay.png'
+import "./Footer.css"
 
 export default function Footer() {
     return (
@@ -19,24 +20,24 @@ export default function Footer() {
                     <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/amankrindian/"><i className="fa-brands fa-facebook" /></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/amankrindian"><i className="fa-brands fa-twitter" /></a>
                     <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCMr7miKWktz7vXj7zydHBcQ"><i className="fa-brands fa-youtube" /></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/amankumar80025/"><i className="fa-brands fa-instagram" /></a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/aman__indian/"><i className="fa-brands fa-instagram" /></a>
                 </div>
             </div>
             <div className="col">
                 <h4>About</h4>
-                <a href="/">About Us</a>
-                <a href="/">Delivery Information</a>
-                <a href="/">Privacy Policy</a>
-                <a href="/">Terms &amp; Conditions</a>
-                <a href="/">Contact Us</a>
+                <Link to="/about">About Us</Link>
+                <Link to="/contact">Delivery Information</Link>
+                <Link to="/contact">Privacy Policy</Link>
+                <Link to="/contact">Terms &amp; Conditions</Link>
+                <Link to="/contact">Contact Us</Link>
             </div>
             <div className="col">
                 <h4>My Account</h4>
-                <a href="/">Sign In</a>
-                <a href="/">View Cart</a>
-                <a href="/">My Watchlist</a>
-                <a href="/">Track My Order</a>
-                <a href="/">Help</a>
+                <Link to="/cart"     >Sign In</Link>
+                <Link to="/cart" >View Cart</Link>
+                <Link to="/cart">My Watchlist</Link>
+                <Link to="/cart">Track My Order</Link>
+                <Link to="/cart">Help</Link>
             </div>
             <div className="col">
                 <h4>Install App</h4>

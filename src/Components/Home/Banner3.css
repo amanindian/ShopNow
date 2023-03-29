@@ -1,0 +1,65 @@
+/* *******************BANNER - 3************************** */
+#banner-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#banner-3 div {
+    min-height: 200px;
+}
+
+.banner-3-box {
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 12px;
+    height: 30vh;
+    min-width: 30%;
+    margin: 10px;
+    background: url(../../Image/banner/b7.jpg) no-repeat center center/cover;
+}
+
+.bx2 {
+    background: url(../../Image/banner/b4.jpg) no-repeat center center/cover;
+}
+
+.bx3 {
+    background: url(../../Image/banner/b18.jpg) no-repeat center center/cover;
+}
+
+.banner-3-box h4 {
+    font-size: 30px;
+}
+
+.banner-3-box h5 {
+    color: red;
+    font-size: 15px;
+    font-family: cursive;
+}
+
+
+@media (min-width: 946px) and (max-width: 1000px) {
+    .banner-3-box {
+        max-width: 30%;
+        height: 13vh;
+        margin: 0;
+    }
+}
+
+@media (max-width: 945px) {
+    .banner-3-box {
+        min-width: 100%;
+    }
+
+    .banner-3-box h4 {
+        font-size: 45px;
+    }
+
+    .banner-3-box h5 {
+        font-size: 20px;
+    }
+}

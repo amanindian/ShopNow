@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/Main/NavBar";
 import News from "./Components/Main/News";
 import Footer from "./Components/Main/Footer";
-import Product from "./Components/Main/Product";
+import SingleProduct from "./Components/Main/SingleProduct";
 import Blog from "./Components/Blog/Blog";
 import Home from "./Components/Home/Home";
 import Shop from "./Components/Shop/Shop";
@@ -48,8 +47,8 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Cart" element={<Cart NewCartProduct={NewCartProduct} />} />
           <Route
-            path="/ShowProductDetails"
-            element={<Product ClickedData={ClickedData}  setNewCartProduct={setNewCartProduct}  />}
+            path="/SingleProduct"
+            element={<SingleProduct ClickedData={ClickedData}  setNewCartProduct={setNewCartProduct}  />}
           />
         </Routes>
         <News />

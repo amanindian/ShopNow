@@ -1,0 +1,62 @@
+/*  ****************FETURES*********** */
+#features {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.fe-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 7px 10px;
+    border: 1px solid #000;
+    box-shadow: 10px 20px 54px rgba(137, 216, 255, 0.2);
+    padding: 20px 15px;
+    border-radius: 5px;
+}
+
+.fe-card:hover {
+    box-shadow: 10px 20px 54px rgba(59, 58, 58, 0.2);
+}
+
+.fe-card img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.fe-card h6 {
+    align-items: center;
+    padding: 7px;
+    font-size: 15px;
+    background-color: rgb(186, 255, 232);
+    border-radius: 5px;
+}
+
+.fe-card:nth-child(2) h6 {
+    background-color: rgb(253, 190, 253);
+}
+
+.fe-card:nth-child(3) h6 {
+    background-color: rgb(157, 241, 157);
+}
+
+.fe-card:nth-child(4) h6 {
+    background-color: rgb(129, 184, 239);
+}
+
+.fe-card:nth-child(5) h6 {
+    background-color: rgb(185, 173, 255);
+}
+
+.fe-card:nth-child(6) h6 {
+    background-color: rgb(250, 156, 122);
+}
+
+@media (max-width:700px){
+    .fe-card {
+        width: 70vw;
+    }
+}

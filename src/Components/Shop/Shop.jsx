@@ -30,7 +30,7 @@ export default function Shop({ setClickedData, setNewCartProduct }) {
   useEffect(() => {
     localStorage.CartProduct = JSON.stringify(CartProduct);
     setNewCartProduct(CartProduct);
-  }, [CartProduct]);
+  }, [CartProduct,setNewCartProduct]);
 
   const HendleAddToCart = (event) => {
     let Item = event.target;

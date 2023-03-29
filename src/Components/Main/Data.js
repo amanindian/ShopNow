@@ -7,9 +7,6 @@ import f6 from "../../Image/products/f6.jpg";
 import f7 from "../../Image/products/f7.jpg";
 import f8 from "../../Image/products/f8.jpg";
 
-
-
-
 import n1 from '../../Image/products/n1.jpg'
 import n2 from '../../Image/products/n2.jpg'
 import n3 from '../../Image/products/n3.jpg'
@@ -18,8 +15,6 @@ import n5 from '../../Image/products/n5.jpg'
 import n6 from '../../Image/products/n6.jpg'
 import n7 from '../../Image/products/n7.jpg'
 import n8 from '../../Image/products/n8.jpg'
-
-
 
 let defaultdDes =
 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laborum aperiam adipisci amet suscipit, nulla dolores doloremque excepturi eos, earum provident. Inventore aut quas expedita dolor, pariatur cupiditate alias aperiam culpa, sunt ullam ab aliquam cumque officia! Est non consequuntur ipsam aperiam quo quas pariatur repellat, voluptates voluptatem quis. Sed?";
@@ -74,11 +69,6 @@ export const ProList1 = [
   Amount: 500,
 },
 ]
-
-
-
-
-
 
 
 export const ProList2 = [

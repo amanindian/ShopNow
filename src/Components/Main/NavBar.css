@@ -1,0 +1,99 @@
+header {
+  background-color: var(--back);
+  color: var(--col);
+  display: flex;
+  box-shadow: 0 0 10px rgb(0, 47, 255);
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+#nav-open,
+#nav-hide {
+  display: none;
+  cursor: pointer;
+}
+
+nav a {
+  margin: 10px 30px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Libre Baskerville", serif;
+  color: var(--navcol);
+}
+
+.icon {
+  font-weight: bold;
+  font-size: 35px;
+  margin: 5px 10px;
+  font-family: "Moon Dance", cursive;
+  color: var(--navcol);
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+}
+
+li a:hover,
+li a.active,
+nav a:hover,
+.icon:hover {
+  color: var(--hover);
+}
+
+li a.active::after,
+li a:hover::after {
+  content: "";
+  background-color: var(--hover);
+  width: 30%;
+  height: 3px;
+  bottom: -4px;
+  left: 30px;
+  position: absolute;
+}
+
+
+
+@media (max-width: 700px) {
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: var(--back);
+    position: fixed;
+    font-size: 20px;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 5;
+    transition: right 0.5s;
+  }
+
+  #nav-open,
+  #nav-hide {
+    display: inline;
+    position: absolute;
+    top: 25px;
+    font-size: 25px;
+    right: 25px;
+  }
+}
+
+@media (max-width: 945px) {
+  nav a {
+    margin: 10px 15px;
+  }
+}
