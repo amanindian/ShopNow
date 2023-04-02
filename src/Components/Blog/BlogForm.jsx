@@ -17,7 +17,6 @@ export default function BlogForm({
     if (image) {
       setBlogImage(image);
     }
-    console.log("first");
   }, [image, setBlogImage]);
 
   const handleFileUpload = (event) => {

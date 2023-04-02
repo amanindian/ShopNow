@@ -46,10 +46,11 @@
 
 #copyright {
   display: flex;
-  font-size: 22px;
+  font-size: 25px;
   justify-content: center;
   font-family: "Merienda", cursive;
   background-color: rgb(198, 198, 198);
+  padding: 0 10px;
 }
 
 @media (max-width: 945px) {

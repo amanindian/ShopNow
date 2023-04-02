@@ -10,6 +10,7 @@ import Shop from "./Components/Shop/Shop";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
 import Cart from "./Components/Cart/Cart";
+import Copyright from "./Components/Main/Copyright";
 
 function App() {
   let [ClickedData, setClickedData] = useState(() => {
@@ -24,20 +25,15 @@ function App() {
     localStorage.ClickedData = JSON.stringify(ClickedData);
   }, [ClickedData]);
 
-
-
   //For Cart
   const [NewCartProduct, setNewCartProduct] = useState([])
-
-
-
 
   return (
     <>
       <Router>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home setClickedData={setClickedData} setNewCartProduct={setNewCartProduct} NewCartProduct={NewCartProduct} />} />
+          <Route exact path="/" element={<Home setClickedData={setClickedData} setNewCartProduct={setNewCartProduct} NewCartProduct={NewCartProduct} />} />
           <Route
             path="/Shop"
             element={<Shop setClickedData={setClickedData} setNewCartProduct={setNewCartProduct} />}
@@ -48,11 +44,12 @@ function App() {
           <Route path="/Cart" element={<Cart NewCartProduct={NewCartProduct} />} />
           <Route
             path="/SingleProduct"
-            element={<SingleProduct ClickedData={ClickedData}  setNewCartProduct={setNewCartProduct}  />}
+            element={<SingleProduct ClickedData={ClickedData} setNewCartProduct={setNewCartProduct} />}
           />
         </Routes>
         <News />
         <Footer />
+        <Copyright />
       </Router>
     </>
   );

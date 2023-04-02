@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./NavBar.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
     const [UlStyle, setUlStyle] = useState({
@@ -15,19 +15,19 @@ export default function NavBar() {
     }
     return (
         <header>
-            <Link className="icon" to="/">ShopNow.com</Link>
+            <NavLink className="icon" to="/">ShopNow.com</NavLink>
             <nav>
                 <ul id="openul" style={UlStyle}>
                     <i className="fa-solid fa-circle-xmark" onClick={CloseNav} id="nav-hide" />
-                    <li><Link className="active" onClick={CloseNav} to="/">Home </Link></li>
-                    <li><Link to="/Shop" onClick={CloseNav}>Shop</Link></li>
-                    <li><Link to="/Blogs" onClick={CloseNav}>Blog </Link></li>
-                    <li><Link to="/About" onClick={CloseNav}>About</Link></li>
-                    <li><Link to="/Contact" onClick={CloseNav}>Contact</Link></li>
+                    <li><NavLink to="/" onClick={CloseNav} >Home </NavLink></li>
+                    <li><NavLink to="/Shop" onClick={CloseNav}>Shop</NavLink></li>
+                    <li><NavLink to="/Blogs" onClick={CloseNav}>Blog </NavLink></li>
+                    <li><NavLink to="/About" onClick={CloseNav}>About</NavLink></li>
+                    <li><NavLink to="/Contact" onClick={CloseNav}>Contact</NavLink></li>
                     <li>
-                        <Link to="/Cart" onClick={CloseNav}>
+                        <NavLink to="/Cart" onClick={CloseNav}>
                             <i title="Cart" className="fa-solid fa-cart-shopping" />
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
                 <i className="fa-solid fa-bars" onClick={OpenNav} id="nav-open" />

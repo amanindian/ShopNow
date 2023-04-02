@@ -1,7 +1,7 @@
 import React from "react";
-import { ProList1 as ProList } from "./Data"
+import { ProList1 as ProList } from "./Data";
 
-import Products from "./Product"
+import Products from "./Product";
 
 export default function Products1({ ShowProduct, HendleAddToCart }) {
   return (
@@ -11,7 +11,13 @@ export default function Products1({ ShowProduct, HendleAddToCart }) {
       <div className="container">
         {ProList.map((element, index) => {
           return (
-            <Products element={element} key={index} index={index} ShowProduct={ShowProduct} HendleAddToCart={HendleAddToCart} />
+            <Products
+              element={element}
+              key={index}
+              index={index}
+              ShowProduct={ShowProduct}
+              HendleAddToCart={HendleAddToCart}
+            />
           );
         })}
       </div>

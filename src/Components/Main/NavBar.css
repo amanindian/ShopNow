@@ -55,14 +55,12 @@ li a.active::after,
 li a:hover::after {
   content: "";
   background-color: var(--hover);
-  width: 30%;
+  width: 50%;
   height: 3px;
   bottom: -4px;
   left: 30px;
   position: absolute;
 }
-
-
 
 @media (max-width: 700px) {
   nav ul {
@@ -95,5 +93,22 @@ li a:hover::after {
 @media (max-width: 945px) {
   nav a {
     margin: 10px 15px;
+  }
+  li a:hover,
+  li a.active,
+  nav a:hover,
+  .icon:hover {
+    color: var(--hover);
+  }
+
+  li a.active::after,
+  li a:hover::after {
+    content: "";
+    background-color: var(--hover);
+    width: 60%;
+    height: 3px;
+    bottom: -4px;
+    left: 20px;
+    position: absolute;
   }
 }
