@@ -3,14 +3,14 @@ import React from "react";
 export default function CartItem({ Product, Index, HendleRemoveItem }) {
   return (
     <tr>
-      <th scope="row">{Index + 1}</th>
+      <td className="CartSrNo">{Index + 1}</td>
       <td className="ProTitle">{Product.ProTitle}</td>
-      <td>{Product.ProPrice}</td>
-      <th>
+      <td className="CartPrice">{Product.ProPrice}</td>
+      <td>
         <button className="btn">-</button>
         <button className="btn ">0</button>
         <button className="btn ">+</button>
-      </th>
+      </td>
       <td>
         {" "}
         <button index={Index} onClick={HendleRemoveItem} className="RemoveBtn">

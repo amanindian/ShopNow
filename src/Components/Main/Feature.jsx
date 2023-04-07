@@ -5,7 +5,7 @@ import f3 from '../../Image/features/f3.png'
 import f4 from '../../Image/features/f4.png'
 import f5 from '../../Image/features/f5.png'
 import f6 from '../../Image/features/f6.png'
-import './Style.css'
+import './Feature.css'
 
 export default function Feature() {
     return (

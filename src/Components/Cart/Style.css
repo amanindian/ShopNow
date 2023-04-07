@@ -1,5 +1,37 @@
+#myTableData {
+  border-collapse: collapse;
+}
+#myTableData td,
+#myTableData th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#myTableData tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#myTableData tr:hover {
+  background-color: lightblue;
+}
+
+.RemoveBtn:hover,
+.btn:hover {
+  background-color: #dddddd;
+  border: 0;
+  border-radius: 5px;
+}
+
+#myTableData th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+
 .TableHead {
-  font-size: 35px;
+  font-size: 30px;
   font-style: italic;
 }
 
@@ -27,6 +59,11 @@ table {
   height: 35px;
   cursor: pointer;
 }
+.CartSrNo,
+.CartPrice {
+  font-size: 25px;
+  font-weight: 500;
+}
 
 @media (max-width: 945px) {
   .TableHead {
@@ -34,11 +71,22 @@ table {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .TableHead {
     font-size: 17px;
   }
-  
-.ProTitle {
-  font-size: 13px;}
+  #myTableData td,
+  #myTableData th {
+    padding: 0;
+  }
+
+  .CartSrNo,
+  .CartPrice {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .ProTitle {
+    font-size: 15px;
+  }
 }

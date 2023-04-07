@@ -28,11 +28,11 @@ export default function Cart() {
   return (
     <>
       <Banner />
-      <table border="1px">
+      <table border="1px" id="myTableData">
         <thead>
           <tr>
             <th scope="col" className="TableHead">
-              Sr. Number
+              Sr. NO
             </th>
             <th scope="col" className="TableHead">
               Product Name

@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Banner() {
   return (
-    <section className="page-header" id="about-header">
+    <section className="page-header">
       <h2>#Add to Cart</h2>
-      <p></p>
+      <p>See Your all Cart Products</p>
     </section>
   );
 }
