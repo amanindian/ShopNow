@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Banner from "./Banner";
 import CartItem from "./CartItem";
+import CartOptions from "./CartOptions";
 import "./Style.css";
 
-export default function Cart() {
+export default function Cart({ setTotalAmount, totalAmount }) {
   const [CartProduct, setCartProduct] = useState(() => {
     if (localStorage.CartProduct) {
       return JSON.parse(localStorage.CartProduct);
@@ -21,12 +22,20 @@ export default function Cart() {
   const HendleRemoveItem = (event) => {
     const IndexRemove = event.target.getAttribute("index");
     let newCartProduct = [...CartProduct];
+    setTotalAmount(totalAmount - newCartProduct[IndexRemove].ProPrice);
     newCartProduct.splice(IndexRemove, 1);
     setCartProduct(newCartProduct);
+    console.log(totalAmount);
+  };
+
+  //Reset Card List and Total Amount
+  const ResetCart = () => {
+    setTotalAmount(0);
+    setCartProduct([]);
   };
 
   return (
-    <>
+    <React.Fragment>
       <Banner />
       <table border="1px" id="myTableData">
         <thead>
@@ -61,6 +70,7 @@ export default function Cart() {
           })}
         </tbody>
       </table>
-    </>
+      <CartOptions totalAmount={totalAmount} ResetCart={ResetCart} />
+    </React.Fragment>
   );
 }

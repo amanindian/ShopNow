@@ -28,23 +28,36 @@ function App() {
   //For Cart
   const [NewCartProduct, setNewCartProduct] = useState([])
 
+  // Total Amount
+  const [totalAmount, setTotalAmount] = useState(() => {
+    if (localStorage.totalAmount) {
+      return JSON.parse(localStorage.totalAmount);
+    } else {
+      return 0;
+    }
+  })
+  useEffect(() => {
+    localStorage.totalAmount = JSON.stringify(totalAmount);
+  }, [totalAmount]);
+
+
   return (
     <>
       <Router>
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<Home setClickedData={setClickedData} setNewCartProduct={setNewCartProduct} NewCartProduct={NewCartProduct} />} />
+          <Route exact path="/" element={<Home setClickedData={setClickedData} setNewCartProduct={setNewCartProduct} NewCartProduct={NewCartProduct} totalAmount={totalAmount} setTotalAmount={setTotalAmount} />} />
           <Route
             path="/Shop"
-            element={<Shop setClickedData={setClickedData} setNewCartProduct={setNewCartProduct} />}
+            element={<Shop setClickedData={setClickedData} setNewCartProduct={setNewCartProduct} totalAmount={totalAmount} setTotalAmount={setTotalAmount} />}
           />
           <Route path="/Blogs" element={<Blog />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Cart" element={<Cart NewCartProduct={NewCartProduct} />} />
+          <Route path="/Cart" element={<Cart NewCartProduct={NewCartProduct} totalAmount={totalAmount} setTotalAmount={setTotalAmount} />} />
           <Route
             path="/SingleProduct"
-            element={<SingleProduct ClickedData={ClickedData} setNewCartProduct={setNewCartProduct} />}
+            element={<SingleProduct ClickedData={ClickedData} setNewCartProduct={setNewCartProduct} totalAmount={totalAmount} setTotalAmount={setTotalAmount} />}
           />
         </Routes>
         <News />

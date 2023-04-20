@@ -89,4 +89,34 @@ table {
   .ProTitle {
     font-size: 15px;
   }
+  .OptBtn {
+    font-size: 20px;
+  }
+}
+
+/* CartOptions */
+.CartOpt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  margin:20px 0 0 0 ;
+  height: 60px;
+}
+.OptBtn{
+  height: 100%;
+}
+.OptBtn:nth-child(1) {
+  background-color: rgb(255, 78, 78);
+  width: 30%;
+}
+.OptBtn:nth-child(2) {
+  background-color: rgb(0, 0, 0);
+  width: 40%;
+}
+.OptBtn:nth-child(3) {
+  background-color: #04aa6d;
+  width: 30%;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./SingleProduct.css"
 
-export default function SingleProduct({ ClickedData, setNewCartProduct }) {
+export default function SingleProduct({ ClickedData, setNewCartProduct ,setTotalAmount, totalAmount }) {
 
     const [CartProduct, setCartProduct] = useState(() => {
         if (localStorage.CartProduct) {
@@ -18,12 +18,12 @@ export default function SingleProduct({ ClickedData, setNewCartProduct }) {
 
     const HendleAddToCart = (event) => {
         let newCartProduct = [...CartProduct];
-        console.log(newCartProduct);
         newCartProduct.push({
             ProPrice: event.target.getAttribute("proprice"),
             ProTitle: event.target.getAttribute("protitle")
         });
         setCartProduct(newCartProduct);
+        setTotalAmount(Number.parseInt(totalAmount)+Number.parseInt(event.target.getAttribute("proprice")))
     };
 
 

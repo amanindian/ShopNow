@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ShopBanner from "./ShopBanner";
 import Products1 from "../Main/Products1";
 
-export default function Shop({ setClickedData, setNewCartProduct }) {
+export default function Shop({ setClickedData, setNewCartProduct,setTotalAmount, totalAmount }) {
   const ShowProduct = (e) => {
     let Item = e.target;
     setClickedData({
@@ -41,7 +41,8 @@ export default function Shop({ setClickedData, setNewCartProduct }) {
       ProTitle: Item.parentElement.getElementsByTagName("h5")[0].innerHTML,
     });
     setCartProduct(newCartProduct);
-  };
+    setTotalAmount(Number.parseInt(totalAmount)+Number.parseInt(Item.parentElement.getElementsByClassName(`proprise`)[0].innerHTML))
+    };
 
   return (
     <React.Fragment>
