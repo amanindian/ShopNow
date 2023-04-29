@@ -9,7 +9,7 @@ React JS
 
 # Installation  
 To install the application, follow these steps:  
-Clone the repository: git clone https://github.com/amanindian/ShopNow-Using-React.git  
+Clone the repository: git clone https://github.com/amanindian/ShopNow-React.git  
 Install dependencies: npm install  
 Run the application: npm start
 
@@ -36,4 +36,4 @@ Contributions are always welcome! If you notice any issues or have any suggestio
 This project was created by<a href="https://www.linkedin.com/in/amanindian/"> Aman Kumar </a>.
 
 # License
-This project is licensed under the MIT License. See the https://github.com/amanindian/ShopNow-Using-React file for more details.
+This project is licensed under the MIT License. See the https://github.com/amanindian/ShopNow-React file for more details.
