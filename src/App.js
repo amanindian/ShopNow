@@ -11,6 +11,9 @@ import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
 import Cart from "./Components/Cart/Cart";
 import Copyright from "./Components/Main/Copyright";
+import { DataProvider } from "./Components/Main/DataContext";
+
+
 
 function App() {
   let [ClickedData, setClickedData] = useState(() => {
@@ -26,7 +29,7 @@ function App() {
   }, [ClickedData]);
 
   //For Cart
-  const [NewCartProduct, setNewCartProduct] = useState([])
+  const [NewCartProduct, setNewCartProduct] = useState([]);
 
   // Total Amount
   const [totalAmount, setTotalAmount] = useState(() => {
@@ -35,36 +38,70 @@ function App() {
     } else {
       return 0;
     }
-  })
+  });
   useEffect(() => {
     localStorage.totalAmount = JSON.stringify(totalAmount);
   }, [totalAmount]);
 
-
   return (
-    <>
+    <DataProvider>
       <Router>
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<Home setClickedData={setClickedData} setNewCartProduct={setNewCartProduct} NewCartProduct={NewCartProduct} totalAmount={totalAmount} setTotalAmount={setTotalAmount} />} />
+          <Route
+            exact
+            path="/"
+            element={
+              <Home
+                setClickedData={setClickedData}
+                setNewCartProduct={setNewCartProduct}
+                NewCartProduct={NewCartProduct}
+                totalAmount={totalAmount}
+                setTotalAmount={setTotalAmount}
+              />
+            }
+          />
           <Route
             path="/Shop"
-            element={<Shop setClickedData={setClickedData} setNewCartProduct={setNewCartProduct} totalAmount={totalAmount} setTotalAmount={setTotalAmount} />}
+            element={
+              <Shop
+                setClickedData={setClickedData}
+                setNewCartProduct={setNewCartProduct}
+                totalAmount={totalAmount}
+                setTotalAmount={setTotalAmount}
+              />
+            }
           />
           <Route path="/Blogs" element={<Blog />} />
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
-          <Route path="/Cart" element={<Cart NewCartProduct={NewCartProduct} totalAmount={totalAmount} setTotalAmount={setTotalAmount} />} />
+          <Route
+            path="/Cart"
+            element={
+              <Cart
+                NewCartProduct={NewCartProduct}
+                totalAmount={totalAmount}
+                setTotalAmount={setTotalAmount}
+              />
+            }
+          />
           <Route
             path="/SingleProduct"
-            element={<SingleProduct ClickedData={ClickedData} setNewCartProduct={setNewCartProduct} totalAmount={totalAmount} setTotalAmount={setTotalAmount} />}
+            element={
+              <SingleProduct
+                ClickedData={ClickedData}
+                setNewCartProduct={setNewCartProduct}
+                totalAmount={totalAmount}
+                setTotalAmount={setTotalAmount}
+              />
+            }
           />
         </Routes>
         <News />
         <Footer />
         <Copyright />
       </Router>
-    </>
+    </DataProvider>
   );
 }
 

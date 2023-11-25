@@ -1,15 +1,15 @@
-import React from "react";
-import { ProList1 as ProList } from "./Data";
-
+import {React ,useContext} from "react";
+import { DataContext } from "./DataContext";
 import Products from "./Product";
 
 export default function Products1({ ShowProduct, HendleAddToCart }) {
+ const {ProList1}=  useContext(DataContext)
   return (
     <section id="product-1">
       <h2>Featured Products</h2>
       <p style={{ fontSize: 20 }}>Summer Collection New Moder Desine</p>
       <div className="container">
-        {ProList.map((element, index) => {
+        {ProList1.map((element, index) => {
           return (
             <Products
               element={element}
