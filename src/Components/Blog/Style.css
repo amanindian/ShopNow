@@ -11,12 +11,11 @@
 }
 
 .blog-img {
-  min-width: 30%;
-  max-width: 40vw;
-  min-height: 30vh;
-  max-height: 60vh;
-  background-size: cover;
-  background-position: center center;
+  width: 100%;
+  padding: 30px;
+  margin: auto;
+  align-self: center;
+  align-items: center;
 }
 
 .blog-content {
@@ -26,6 +25,7 @@
   padding: 20px;
   border: 1px dashed rgb(81, 0, 255);
   margin: 1px 0;
+  position: relative;
 }
 
 .blog-content div {
@@ -115,7 +115,6 @@ label {
 }
 
 @media (max-width: 945px) {
-
   .blog-box {
     flex-direction: column;
   }
@@ -129,7 +128,6 @@ label {
     padding: 20px 0;
   }
 }
-
 
 @media (max-width: 700px) {
   .blog-box {

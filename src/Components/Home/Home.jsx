@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import Feature from "../Main/Feature";
 import Products1 from "../Main/Products1";
 import Products2 from "../Main/Products2";
@@ -6,8 +6,12 @@ import Banner1 from "./Banner1";
 import Banner2 from "./Banner2";
 import Banner3 from "./Banner3";
 import Header from "./Header";
+import { CartContext } from "../../Context/CartData";
 
-export default function Home({ setClickedData, setNewCartProduct ,setTotalAmount, totalAmount}) {
+export default function Home({ setClickedData }) {
+  const { CartProduct, setCartProduct, totalAmount, setTotalAmount } =
+    useContext(CartContext);
+
   const ShowProduct = (e) => {
     let Item = e.target;
     setClickedData({
@@ -25,19 +29,6 @@ export default function Home({ setClickedData, setNewCartProduct ,setTotalAmount
     });
   };
 
-  const [CartProduct, setCartProduct] = useState(() => {
-    if (localStorage.CartProduct) {
-      return JSON.parse(localStorage.CartProduct);
-    } else {
-      return [];
-    }
-  });
-
-  useEffect(() => {
-    localStorage.CartProduct = JSON.stringify(CartProduct);
-    setNewCartProduct(CartProduct);
-  }, [CartProduct, setNewCartProduct]);
-
   const HendleAddToCart = (event) => {
     let Item = event.target;
     let newCartProduct = [...CartProduct];
@@ -46,9 +37,18 @@ export default function Home({ setClickedData, setNewCartProduct ,setTotalAmount
         Item.parentElement.getElementsByClassName(`proprise`)[0].innerHTML,
       ProTitle: Item.parentElement.getElementsByTagName("h5")[0].innerHTML,
     });
+    console.log(setTotalAmount)
     setCartProduct(newCartProduct);
-    setTotalAmount(Number.parseInt(totalAmount)+Number.parseInt(Item.parentElement.getElementsByClassName(`proprise`)[0].innerHTML))
+    setTotalAmount(
+      Number.parseInt(totalAmount) +
+        Number.parseInt(
+          Item.parentElement.getElementsByClassName(`proprise`)[0].innerHTML
+        )
+    );
   };
+
+
+
 
   return (
     <>

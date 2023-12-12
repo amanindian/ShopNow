@@ -1,6 +1,9 @@
-import React from "react";
+import { React, useContext } from "react";
+import { CartContext } from "../../Context/CartData";
 
-export default function CartOptions({ totalAmount, ResetCart }) {
+export default function CartOptions({ResetCart}) {
+  const { totalAmount } = useContext(CartContext);
+
   return (
     <div className="CartOpt">
       <div className="OptBtn" onClick={ResetCart}>

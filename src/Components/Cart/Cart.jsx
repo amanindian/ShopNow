@@ -1,22 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import Banner from "./Banner";
 import CartItem from "./CartItem";
 import CartOptions from "./CartOptions";
 import "./Style.css";
+import { CartContext } from "../../Context/CartData";
 
-export default function Cart({ setTotalAmount, totalAmount }) {
-  const [CartProduct, setCartProduct] = useState(() => {
-    if (localStorage.CartProduct) {
-      return JSON.parse(localStorage.CartProduct);
-    } else {
-      return [];
-    }
-  });
-
-  useEffect(() => {
-    localStorage.CartProduct = JSON.stringify(CartProduct);
-    setCartProduct(CartProduct);
-  }, [CartProduct]);
+export default function Cart() {
+  const { CartProduct, setCartProduct ,totalAmount ,setTotalAmount} = useContext(CartContext);
 
   //Hendle Remove Item
   const HendleRemoveItem = (event) => {
@@ -25,7 +15,6 @@ export default function Cart({ setTotalAmount, totalAmount }) {
     setTotalAmount(totalAmount - newCartProduct[IndexRemove].ProPrice);
     newCartProduct.splice(IndexRemove, 1);
     setCartProduct(newCartProduct);
-    console.log(totalAmount);
   };
 
   //Reset Card List and Total Amount
@@ -70,7 +59,7 @@ export default function Cart({ setTotalAmount, totalAmount }) {
           })}
         </tbody>
       </table>
-      <CartOptions totalAmount={totalAmount} ResetCart={ResetCart} />
+      <CartOptions ResetCart={ResetCart} />
     </React.Fragment>
   );
 }

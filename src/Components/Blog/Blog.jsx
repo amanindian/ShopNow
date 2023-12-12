@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,  useContext } from "react";
 import BlogHeader from "./BlogHeader";
 import BlogData from "./BlogData";
 import BlogForm from "./BlogForm";
+import { BlogDataContex } from "../../Context/BlogData";
 
 const Blog = () => {
   const [BlogTitle, setBlogTitle] = useState("");
   const [BlogDescription, setBlogDescription] = useState("");
   const [BlogImage, setBlogImage] = useState(null);
-  const [AllBlogData, setAllBlogData] = useState([]);
+  const {AllBlogData, setAllBlogData} =useContext(BlogDataContex)
 
   const BlogSave = (event) => {
     event.preventDefault();

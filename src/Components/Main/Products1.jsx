@@ -1,5 +1,5 @@
 import {React ,useContext} from "react";
-import { DataContext } from "./DataContext";
+import { DataContext } from "../../Context/DataContext";
 import Products from "./Product";
 
 export default function Products1({ ShowProduct, HendleAddToCart }) {
