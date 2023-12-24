@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
+import { CartContext } from "../../Context/CartData";
+
 
 export default function NavBar() {
+    const { CartProduct} = useContext(CartContext);
+
     const [UlStyle, setUlStyle] = useState({
         right: "-100%"
     })
@@ -27,6 +31,7 @@ export default function NavBar() {
                     <li>
                         <NavLink to="/Cart" onClick={CloseNav}>
                             <i title="Cart" className="fa-solid fa-cart-shopping" />
+                            <span className='stickey-cart-item' >{CartProduct.length}</span>
                         </NavLink>
                     </li>
                 </ul>

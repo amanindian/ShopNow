@@ -3,18 +3,21 @@ import { DataContext } from "../../Context/DataContext";
 import Products from "./Product";
 
 export default function Products2({ ShowProduct, HendleAddToCart }) {
-  const { ProList2 } = useContext(DataContext);
+  const { ProLists } = useContext(DataContext);
   return (
     <section id="product-2">
       <h2>New Arrivals</h2>
-        <p style={{ fontSize: 20 }}>Summer Collection New Moder Desine</p>
-        <div className="container">
-        {ProList2.map((element, index) => {
+      <p style={{ fontSize: 20 }}>Summer Collection New Moder Desine</p>
+      <div className="container">
+        {/* This below filter method filtring only "new" category products from ProLists */}
+        {ProLists.filter((e) => {
+          return e.category === "new";
+        }).map((element) => {
           return (
             <Products
               element={element}
-              key={index}
-              index={index}
+              key={element.id}
+              id={element.id}
               ShowProduct={ShowProduct}
               HendleAddToCart={HendleAddToCart}
             />

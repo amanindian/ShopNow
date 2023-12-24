@@ -3,18 +3,21 @@ import { Link } from "react-router-dom";
 import "./Product.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import useAddToCart from "../../CustomHooks/useAddToCart";
 
-export default function Product({
-  index,
-  element,
-  HendleAddToCart,
-  ShowProduct,
-}) {
+export default function Product({ id, element }) {
   const { Image, Title, Amount, Description } = element;
 
+  const [HendleAddToCart, ShowProduct] = useAddToCart();
+
   return (
-    <div className="pro" key={index}>
-      <Link to="/SingleProduct" onClick={ShowProduct}>
+    <div className="pro" key={id}>
+      <Link
+        to="/SingleProduct"
+        onClick={() => {
+          ShowProduct(id);
+        }}
+      >
         <img className="ProClickImg" src={Image} alt="/" />
       </Link>
       <div className="des">
@@ -27,7 +30,12 @@ export default function Product({
         </div>
         <h4 className="proprise">{Amount}</h4>
       </div>
-      <i className="fa-solid fa-cart-arrow-down" onClick={HendleAddToCart} />
+      <i
+        className="fa-solid fa-cart-arrow-down"
+        onClick={() => {
+          HendleAddToCart(id);
+        }}
+      />
       <div className="proDesc" style={{ display: "none" }}>
         {Description}
       </div>

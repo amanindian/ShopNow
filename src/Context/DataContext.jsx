@@ -31,159 +31,178 @@ import new8 from "../Image/New Items/n8.jpg";
 export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   let defaultTitle = "This is title";
-  const ProList1 = [
+  const ProLists = [
     {
+      id: 1,
       Title: defaultTitle,
       Image: f1,
-
+      category: "old",
       Amount: 789,
     },
     {
+      id: 2,
       Title: defaultTitle,
       Image: f2,
-
+      category: "old",
       Amount: 9999,
     },
     {
+      id: 3,
       Title: defaultTitle,
       Image: f3,
-
+      category: "old",
       Amount: 5005,
     },
     {
+      id: 4,
       Title: defaultTitle,
       Image: f4,
-
+      category: "old",
       Amount: 5090,
     },
     {
+      id: 5,
       Title: defaultTitle,
       Image: f5,
-
+      category: "old",
       Amount: 5008,
     },
     {
+      id: 6,
       Title: defaultTitle,
       Image: f6,
-
+      category: "old",
       Amount: 550,
     },
     {
+      id: 7,
       Title: defaultTitle,
       Image: f7,
-
+      category: "old",
       Amount: 500,
     },
     {
+      id: 8,
       Title: defaultTitle,
       Image: f8,
-
+      category: "old",
       Amount: 500,
     },
     {
+      id: 9,
       Title: defaultTitle,
       Image: n1,
-
+      category: "old",
       Amount: 789,
     },
     {
+      id: 10,
       Title: defaultTitle,
       Image: n2,
-
+      category: "old",
       Amount: 9999,
     },
     {
+      id: 11,
       Title: defaultTitle,
       Image: n3,
-
+      category: "old",
       Amount: 5005,
     },
     {
+      id: 12,
       Title: defaultTitle,
       Image: n4,
-
+      category: "old",
       Amount: 5090,
     },
     {
+      id: 13,
       Title: defaultTitle,
       Image: n5,
-
+      category: "old",
       Amount: 5008,
     },
     {
+      id: 14,
       Title: defaultTitle,
       Image: n6,
-
+      category: "old",
       Amount: 550,
     },
     {
+      id: 15,
       Title: defaultTitle,
       Image: n7,
-
+      category: "old",
       Amount: 500,
     },
     {
+      id: 16,
       Title: defaultTitle,
       Image: n8,
-
+      category: "old",
       Amount: 500,
     },
-  ];
-
-  const ProList2 = [
     {
+      id: 17,
       Title: defaultTitle,
       Image: new1,
-
+      category: "new",
       Amount: 500,
     },
     {
+      id: 18,
       Title: defaultTitle,
       Image: new2,
-
+      category: "new",
       Amount: 500,
     },
     {
+      id: 19,
       Title: defaultTitle,
       Image: new3,
-
+      category: "new",
       Amount: 500,
     },
     {
+      id: 20,
       Title: defaultTitle,
       Image: new4,
-
+      category: "new",
       Amount: 500,
     },
     {
+      id: 21,
       Title: defaultTitle,
       Image: new5,
-
+      category: "new",
       Amount: 500,
     },
     {
+      id: 22,
       Title: defaultTitle,
       Image: new6,
-
+      category: "new",
       Amount: 500,
     },
     {
+      id: 23,
       Title: defaultTitle,
       Image: new7,
-
+      category: "new",
       Amount: 500,
     },
     {
+      id: 24,
       Title: defaultTitle,
       Image: new8,
-
+      category: "new",
       Amount: 500,
     },
   ];
 
   return (
-    <DataContext.Provider value={{ ProList1, ProList2 }}>
-      {children}
-    </DataContext.Provider>
+    <DataContext.Provider value={{ ProLists }}>{children}</DataContext.Provider>
   );
 };

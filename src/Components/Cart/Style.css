@@ -1,85 +1,151 @@
-#myTableData {
-  border-collapse: collapse;
-}
-#myTableData td,
-#myTableData th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#myTableData tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#myTableData tr:hover {
-  background-color: lightblue;
-}
-
-.RemoveBtn:hover,
-.btn:hover {
-  background-color: #dddddd;
-  border: 0;
-  border-radius: 5px;
-}
-
-#myTableData th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04aa6d;
-  color: white;
-}
-
-.TableHead {
-  font-size: 30px;
-  font-style: italic;
-}
-
-table {
+.cart-sec {
   width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
+.cart-item-box {
+  width: 30%;
+  min-height: 200px;
+  background-color: #e5fbff;
+  box-shadow: 0px 0px 3px #888;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.CartSrNo {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  padding: 0.3em;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  background-color: blue;
+  color: azure;
+  z-index: 100;
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: normal;
+  border-radius: 50%;
+}
+.CartImage {
+  min-width: 25%;
+  width: 40%;
+  max-width: 80%;
+  max-height: 100%;
+  min-height: 150px !important;
+}
+
+.Product-Data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  justify-content: center;
+}
 .ProTitle {
-  font-size: 25px;
-  font-style: italic;
+  font-size: 30px;
+  font-family: cursive;
 }
-
-.btn {
-  width: 33.3%;
-  height: 100%;
-  font-size: 25px;
-  height: 35px;
-  font-weight: bold;
+.ProAmount {
+  font-size: 23px;
+  font-weight: 500;
+  font-family: cursive;
 }
-
 .RemoveBtn {
-  font-size: 18px;
-  font-style: italic;
-  width: 100%;
-  height: 35px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 3px;
+  margin: 5px 0;
+  border: 1px solid red;
+  background-color: transparent;
+  color: red;
+  /* font-family: "raleway"; */
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.quantity-buttons {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid white;
+  overflow: hidden;
+}
+
+.btn-qt {
+  font-size: 20px;
+  padding: 5px 10px;
+  z-index: 50;
+  border: 0;
+  background: transparent;
+  color: #fff;
+}
+
+.btn-qt:nth-child(1) {
+  background-color: red;
   cursor: pointer;
 }
-.CartSrNo,
-.CartPrice {
-  font-size: 25px;
-  font-weight: 500;
+.btn-qt:nth-child(2) {
+  background-color: black;
+}
+.btn-qt:nth-child(3) {
+  cursor: pointer;
+  background-color: green;
 }
 
-@media (max-width: 945px) {
-  .TableHead {
-    font-size: 20px;
+.RemoveBtn:hover {
+  background-color: red;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .cart-item-box {
+    width: 40%;
   }
 }
 
-@media (max-width: 500px) {
-  .TableHead {
-    font-size: 17px;
+@media (max-width: 910px) {
+  .cart-item-box {
+    width: 40%;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
   }
-  #myTableData td,
-  #myTableData th {
+  .cart-sec {
     padding: 0;
   }
 
+  .CartImage {
+    min-width: 50%;
+    width: 100%;
+    max-width: 80%;
+    max-height: 100%;
+    min-height: 150px !important;
+  }
+  .Product-Data {
+    width: 80%;
+  }
+  .ProTitle,
+  .ProAmount {
+    font-size: 20px;
+  }.RemoveBtn{
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .cart-item-box {
+    width: 80%;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+  }
   .CartSrNo,
   .CartPrice {
     font-size: 18px;
@@ -102,13 +168,14 @@ table {
   color: #fff;
   text-align: center;
   font-size: 35px;
-  margin:20px 0 0 0 ;
+  margin: 20px 0 0 0;
   height: 60px;
 }
-.OptBtn{
+.OptBtn {
   height: 100%;
 }
 .OptBtn:nth-child(1) {
+  cursor: pointer;
   background-color: rgb(255, 78, 78);
   width: 30%;
 }
@@ -117,6 +184,7 @@ table {
   width: 40%;
 }
 .OptBtn:nth-child(3) {
+  cursor: pointer;
   background-color: #04aa6d;
   width: 30%;
 }

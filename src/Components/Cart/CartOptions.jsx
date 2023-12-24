@@ -1,7 +1,7 @@
 import { React, useContext } from "react";
 import { CartContext } from "../../Context/CartData";
 
-export default function CartOptions({ResetCart}) {
+export default function CartOptions({ ResetCart, HandlePayment }) {
   const { totalAmount } = useContext(CartContext);
 
   return (
@@ -10,7 +10,9 @@ export default function CartOptions({ResetCart}) {
         Reset
       </div>
       <div className="OptBtn">Total Amount: {totalAmount}</div>
-      <div className="OptBtn">Pay Now</div>
+      <div className="OptBtn" onClick={HandlePayment}>
+        Pay Now
+      </div>
     </div>
   );
 }

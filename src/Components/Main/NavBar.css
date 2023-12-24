@@ -112,3 +112,16 @@ li a:hover::after {
     position: absolute;
   }
 }
+
+.stickey-cart-item {
+  position: absolute;
+  top: -8px;
+  text-align: center;
+  border-radius: 50%;
+  font-family: "monospace";
+  right: 20px;
+  font-size: 15px;
+  padding: 3px 4px;
+  background-color: blue;
+  color: white;
+}
