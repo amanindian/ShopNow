@@ -7,13 +7,13 @@ export default function People() {
   return (
     <div className="people">
       <div>
-        <img src={P1} alt="Director Pic" />
+        <img src={P1} alt="Aman Kumar Pic Aman Indian amanindian" />
         <p>
           <span>Aman Kumar</span>
           <br />
           Founder &amp; CEO <br />
           Phone: +918002579962
-          <br /> Email: amankumar@shopnow.com
+          <br /> Email: kramanpandey53@gmail.com
         </p>
       </div>
       <div>

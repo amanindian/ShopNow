@@ -1,13 +1,13 @@
 import React from "react";
 import ShopBanner from "./ShopBanner";
-import Products1 from "../Main/Products1";
+import Products from "./Products";
 
 export default function Shop() {
 
   return (
     <React.Fragment>
       <ShopBanner />
-      <Products1 />
+      <Products />
     </React.Fragment>
   );
 }

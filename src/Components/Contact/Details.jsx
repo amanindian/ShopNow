@@ -13,17 +13,14 @@ export default function Details() {
         </li>
         <li>
           <i className="fa-solid fa-phone" />
-          <p>+918002579962</p>
+          <p><a href="tel:+918002579962">+918002579962</a></p>
         </li>
         <li>
           <i className="fa-regular fa-envelope" />
-          <p>kramanpandey53@gmail.com</p>
+          <p ><a href="mailto:kramanpandey53@gmail.com" >kramanpandey53@gmail.com</a></p>
         </li>
-        <li>
-          <i className="fa-regular fa-clock" />
-          <p>10:00 - 18:00(Monday - Sunday)</p>
-        </li>
+
       </div>
-    </div>
+    </div >
   );
 }

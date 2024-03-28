@@ -9,7 +9,7 @@ export default function CartOptions({ ResetCart, HandlePayment }) {
       <div className="OptBtn" onClick={ResetCart}>
         Reset
       </div>
-      <div className="OptBtn">Total Amount: {totalAmount}</div>
+      <div className="OptBtn">Total Amount: &#8377;{totalAmount}</div>
       <div className="OptBtn" onClick={HandlePayment}>
         Pay Now
       </div>

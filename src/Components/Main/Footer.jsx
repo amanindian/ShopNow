@@ -16,11 +16,12 @@ export default function Footer() {
                 <p><strong>Hours:</strong>10:00 - 18:00(Monday - Sunday)</p>
                 <h4>Follow</h4>
                 <div className="follow-icons">
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/amanindian/"><i className="fa-brands fa-linkedin" /></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/amankrindian/"><i className="fa-brands fa-facebook" /></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/amankrindian"><i className="fa-brands fa-twitter" /></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCMr7miKWktz7vXj7zydHBcQ"><i className="fa-brands fa-youtube" /></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/aman__indian/"><i className="fa-brands fa-instagram" /></a>
+                    <a title='Linkedin amanindian' target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/amanindian/"><i className="fa-brands fa-linkedin" /></a>
+                    <a title='Facebook amanindian' target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/amankrindian/"><i className="fa-brands fa-facebook" /></a>
+                    <a title='Twitter amanindian' target="_blank" rel="noopener noreferrer" href="https://twitter.com/amankrindian"><i className="fa-brands fa-twitter" /></a>
+                    <a title='Youtube amanindian' target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/channel/UCMr7miKWktz7vXj7zydHBcQ"><i className="fa-brands fa-youtube" /></a>
+                    <a title='Instagram amanindian' target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/aman__indian/"><i className="fa-brands fa-instagram" /></a>
+                    <a title='Github amanindian' target="_blank" rel="noopener noreferrer" href="https://github.com/amanindian/"><i className="fa-brands fa-github" /></a>
                 </div>
             </div>
             <div className="col">

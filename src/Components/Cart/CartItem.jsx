@@ -1,6 +1,5 @@
 import { React } from "react";
 import useAddToCart from "../../CustomHooks/useAddToCart";
-import { Link } from "react-router-dom";
 
 export default function CartItem({ Product, Index }) {
   const [, ShowProduct, HendleRemoveItem, IncriseQuantity, DecriseQuantity] =
@@ -8,18 +7,14 @@ export default function CartItem({ Product, Index }) {
   return (
     <div className="cart-item-box">
       <span className="CartSrNo ">{Index + 1}</span>
-      <Link
-        to="/SingleProduct"
-        onClick={() => {
-          ShowProduct(Product.id);
-        }}
-        className="CartImage"
-      >
-        <img src={Product.Image} width="100%" alt="Product "  />
-      </Link>
+
+      <img className="CartImage" onClick={() => {
+        ShowProduct(Product.id);
+      }} src={Product.Image} width="100%" alt="Product " />
+
       <div className="Product-Data">
         <h2 className="ProTitle">{Product.Title}</h2>
-        <p className="ProAmount">{Product.Amount}</p>
+        <p className="ProAmount">&#8377;{Product.Amount}</p>
         <div className="quantity-buttons">
           <button
             className="btn-qt"

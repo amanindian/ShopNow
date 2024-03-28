@@ -1,22 +1,18 @@
 /*  ***********ROOT CODE *********** */
 @import url("https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  border: 1px solid yellowgreen;
-  border-radius: 10px;
+  border: 1px solid var(--navcol);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(blue, red, green, var(--navcol));
-  border-radius: 10px;
-  transition: 5s ease;
+  background: var(--navcol);
 }
-
 
 :root {
   --back: #e3e6f3;
@@ -30,6 +26,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Raleway", sans-serif;
 }
 
 h1 {

@@ -34,9 +34,11 @@ export const DataProvider = ({ children }) => {
   const ProLists = [
     {
       id: 1,
-      Title: defaultTitle,
+      Title: "This is my title",
       Image: f1,
+      Images: [f1, f2],
       category: "old",
+      categorys: ["old"],
       Amount: 789,
     },
     {
@@ -44,6 +46,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: f2,
       category: "old",
+      categorys: ["old"],
       Amount: 9999,
     },
     {
@@ -51,6 +54,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: f3,
       category: "old",
+      categorys: ["old", "men"],
       Amount: 5005,
     },
     {
@@ -58,13 +62,15 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: f4,
       category: "old",
+      categorys: ["old", "men"],
       Amount: 5090,
     },
     {
       id: 5,
-      Title: defaultTitle,
+      Title: "Ye mera short hai",
       Image: f5,
       category: "old",
+      categorys: ["old", "men"],
       Amount: 5008,
     },
     {
@@ -72,6 +78,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: f6,
       category: "old",
+      categorys: ["old"],
       Amount: 550,
     },
     {
@@ -79,6 +86,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: f7,
       category: "old",
+      categorys: ["old", "women"],
       Amount: 500,
     },
     {
@@ -86,6 +94,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: f8,
       category: "old",
+      categorys: ["old"],
       Amount: 500,
     },
     {
@@ -93,6 +102,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: n1,
       category: "old",
+      categorys: ["old", "men"],
       Amount: 789,
     },
     {
@@ -100,6 +110,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: n2,
       category: "old",
+      categorys: ["old"],
       Amount: 9999,
     },
     {
@@ -107,6 +118,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: n3,
       category: "old",
+      categorys: ["old", "men"],
       Amount: 5005,
     },
     {
@@ -114,6 +126,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: n4,
       category: "old",
+      categorys: ["old"],
       Amount: 5090,
     },
     {
@@ -121,6 +134,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: n5,
       category: "old",
+      categorys: ["old"],
       Amount: 5008,
     },
     {
@@ -128,6 +142,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: n6,
       category: "old",
+      categorys: ["old"],
       Amount: 550,
     },
     {
@@ -135,6 +150,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: n7,
       category: "old",
+      categorys: ["old"],
       Amount: 500,
     },
     {
@@ -142,6 +158,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: n8,
       category: "old",
+      categorys: ["old", "women"],
       Amount: 500,
     },
     {
@@ -149,6 +166,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: new1,
       category: "new",
+      categorys: ["new"],
       Amount: 500,
     },
     {
@@ -156,6 +174,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: new2,
       category: "new",
+      categorys: ["new"],
       Amount: 500,
     },
     {
@@ -163,6 +182,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: new3,
       category: "new",
+      categorys: ["new"],
       Amount: 500,
     },
     {
@@ -170,6 +190,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: new4,
       category: "new",
+      categorys: ["new"],
       Amount: 500,
     },
     {
@@ -177,6 +198,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: new5,
       category: "new",
+      categorys: ["new"],
       Amount: 500,
     },
     {
@@ -184,6 +206,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: new6,
       category: "new",
+      categorys: ["new"],
       Amount: 500,
     },
     {
@@ -191,6 +214,7 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: new7,
       category: "new",
+      categorys: ["new"],
       Amount: 500,
     },
     {
@@ -198,9 +222,11 @@ export const DataProvider = ({ children }) => {
       Title: defaultTitle,
       Image: new8,
       category: "new",
+      categorys: ["new"],
       Amount: 500,
     },
   ];
+
 
   return (
     <DataContext.Provider value={{ ProLists }}>{children}</DataContext.Provider>

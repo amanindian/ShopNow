@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { CartContext } from "../Context/CartData";
 import { DataContext } from "../Context/DataContext";
+import { useNavigate } from "react-router-dom";
+
 
 export default function useAddToCart() {
   const { ProLists } = useContext(DataContext);
@@ -33,16 +35,15 @@ export default function useAddToCart() {
       return (
         prevValue -
         Number.parseInt(RemoveProduct.Amount) *
-          Number.parseInt(newCartProductforamount.length)
+        Number.parseInt(newCartProductforamount.length)
       );
     });
   };
 
+  const singleProductNavigation = useNavigate()
   //For Showing Single product
   const ShowProduct = (targetId) => {
-    localStorage.targetItem = JSON.stringify(
-      ProLists.find((item) => item.id === targetId)
-    );
+    singleProductNavigation(`/SingleProduct`, { state: { id: targetId } })
   };
 
   const IncriseQuantity = (targetId) => {

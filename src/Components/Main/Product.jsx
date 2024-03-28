@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Product.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -12,14 +11,15 @@ export default function Product({ id, element }) {
 
   return (
     <div className="pro" key={id}>
-      <Link
+      {/* <Link
         to="/SingleProduct"
-        onClick={() => {
-          ShowProduct(id);
-        }}
+        
       >
-        <img className="ProClickImg" src={Image} alt="/" />
-      </Link>
+      </Link> */}
+      <img onClick={() => {
+        ShowProduct(id);
+        window.scrollTo(0,0)
+      }} className="ProClickImg" src={Image} alt="/" />
       <div className="des">
         <span>adidas</span>
         <h5 className="about">{Title}</h5>
@@ -28,7 +28,7 @@ export default function Product({ id, element }) {
             <FontAwesomeIcon key={i} icon={faStar} />
           ))}
         </div>
-        <h4 className="proprise">{Amount}</h4>
+        <h4 className="proprise">&#8377; {Amount}</h4>
       </div>
       <i
         className="fa-solid fa-cart-arrow-down"

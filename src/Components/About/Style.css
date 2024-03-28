@@ -18,6 +18,7 @@
 
 #about-head img {
   width: 40%;
+  object-fit: cover;
 }
 
 #about-head div {
@@ -32,10 +33,11 @@
 #about-head div p,
 #about-head div abbr {
   margin: 15px 0;
+  text-align: justify;
+  font-weight: 500;
 }
 
 @media (min-width: 946px) and (max-width: 1000px) {
-
   #about-head {
     display: flex;
     flex-direction: column;
@@ -51,7 +53,6 @@
 }
 
 @media (max-width: 945px) {
-
   #about-head {
     display: flex;
     flex-direction: column;

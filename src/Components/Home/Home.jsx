@@ -8,15 +8,16 @@ import Banner3 from "./Banner3";
 import Header from "./Header";
 
 export default function Home() {
+
   return (
-    <>
-      <Header />
-      <Feature />
-      <Products1 />
-      <Products2 />
-      <Banner1 />
-      <Banner2 />
-      <Banner3 />
-    </>
+  <React.Fragment>
+    <Header />
+    <Products1 />
+    <Feature />
+    <Products2 />
+    <Banner1 />
+    <Banner2 />
+    <Banner3 />
+  </React.Fragment>
   );
 }

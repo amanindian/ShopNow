@@ -1,11 +1,11 @@
-import React, { useState,useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 import { CartContext } from "../../Context/CartData";
 
 
 export default function NavBar() {
-    const { CartProduct} = useContext(CartContext);
+    const { CartProduct } = useContext(CartContext);
 
     const [UlStyle, setUlStyle] = useState({
         right: "-100%"
@@ -24,9 +24,9 @@ export default function NavBar() {
                 <ul id="openul" style={UlStyle}>
                     <i className="fa-solid fa-circle-xmark" onClick={CloseNav} id="nav-hide" />
                     <li><NavLink to="/" onClick={CloseNav} >Home </NavLink></li>
+                    <li><NavLink to="/About" onClick={CloseNav}>About</NavLink></li>
                     <li><NavLink to="/Shop" onClick={CloseNav}>Shop</NavLink></li>
                     <li><NavLink to="/Blogs" onClick={CloseNav}>Blog </NavLink></li>
-                    <li><NavLink to="/About" onClick={CloseNav}>About</NavLink></li>
                     <li><NavLink to="/Contact" onClick={CloseNav}>Contact</NavLink></li>
                     <li>
                         <NavLink to="/Cart" onClick={CloseNav}>

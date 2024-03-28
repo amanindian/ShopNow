@@ -37,6 +37,7 @@
   border-radius: 50%;
 }
 .CartImage {
+  cursor: pointer;
   min-width: 25%;
   width: 40%;
   max-width: 80%;
