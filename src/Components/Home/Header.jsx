@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Header.css"
+import { Link } from 'react-router-dom'
 
 export default function Header() {
     return (
@@ -8,7 +9,7 @@ export default function Header() {
             <h2>Super value Deal</h2>
             <h1>On all Products</h1>
             <p>Save more on coupons &amp; up to 70% off!</p>
-            <div>Shop Now</div>
+            <Link to='/shop'>Shop Now</Link>
         </section>
     )
 }

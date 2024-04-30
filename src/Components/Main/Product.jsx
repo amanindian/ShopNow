@@ -11,15 +11,10 @@ export default function Product({ id, element }) {
 
   return (
     <div className="pro" key={id}>
-      {/* <Link
-        to="/SingleProduct"
-        
-      >
-      </Link> */}
       <img onClick={() => {
         ShowProduct(id);
-        window.scrollTo(0,0)
-      }} className="ProClickImg" src={Image} alt="/" />
+        window.scrollTo(0, 0)
+      }} className="ProClickImg" src={Image} alt={`ShopNow Product Number ${id}`} />
       <div className="des">
         <span>adidas</span>
         <h5 className="about">{Title}</h5>

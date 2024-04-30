@@ -15,8 +15,8 @@
   min-width: 100%;
 }
 
-#hero div {
-  font-family: "Merienda", cursive;
+#hero a {
+  font-family: "syne";
   background: url(../../Image/button.png) no-repeat center center/cover;
   color: var(--navcol);
   padding: 15px 32px;
@@ -27,7 +27,7 @@
   cursor: pointer;
 }
 
-#hero div:hover {
+#hero a:hover {
   color: var(--hover);
 }
 

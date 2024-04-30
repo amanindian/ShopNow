@@ -29,8 +29,8 @@ export default function Products() {
 
     return (
         <section id="product-1">
-            <h2>Featured Products</h2>
-            <p style={{ fontSize: 20 }}>Summer Collection New Moder Desine</p>
+            {/* <h2>Featured Products</h2>
+            <p style={{ fontSize: 20 }}>Summer Collection New Moder Desine</p> */}
 
             <Filter CatagValue={CatagValue} setCatagValue={setCatagValue} InputFilter={InputFilter} setInputFilter={setInputFilter} />
 

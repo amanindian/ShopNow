@@ -9,10 +9,8 @@ export default function Products1() {
 
 
   useEffect(() => {
-    let newLitemLista = newLitemList.slice(0, 12)
-    setnewLitemList(newLitemLista)
-  }, [newLitemList])
-
+    setnewLitemList(prevList => prevList.slice(0, 12));
+  }, [ProLists]);
 
   return (
     <section id="product-1">

@@ -47,10 +47,16 @@
 #copyright {
   display: flex;
   font-size: 25px;
+  font-size: 25px;
   justify-content: center;
-  font-family: "Merienda", cursive;
+  font-family: "Syne";
   background-color: rgb(198, 198, 198);
-  padding: 0 10px;
+  padding: 5px 10px;
+}
+#copyright a {
+  font-size: 25px;
+  font-family: inherit;
+  font-weight: inherit;
 }
 
 @media (max-width: 945px) {

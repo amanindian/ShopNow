@@ -33,6 +33,7 @@
 #about-head div p,
 #about-head div abbr {
   margin: 15px 0;
+  line-height: 1.2;
   text-align: justify;
   font-weight: 500;
 }

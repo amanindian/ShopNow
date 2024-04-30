@@ -38,8 +38,9 @@ export const DataProvider = ({ children }) => {
       Image: f1,
       Images: [f1, f2],
       category: "old",
-      categorys: ["old"],
+      categorys: ["old", "man"],
       Amount: 789,
+      Short_Description: "ShopNow, your ultimate destination for online shopping! ShopNow is a cutting-edge web application designed with the latest technologies including HTML, CSS, JavaScript, and React JS. Our platform provides customers "
     },
     {
       id: 2,

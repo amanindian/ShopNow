@@ -1,28 +1,29 @@
 import React, { useState, useContext, useEffect } from "react";
 import "./SingleProduct.css";
+import { useParams } from "react-router-dom";
 import useAddToCart from "../../CustomHooks/useAddToCart";
-import { useLocation } from "react-router-dom";
-
-
 import { DataContext } from "../../Context/DataContext";
+import PageNotFound from "./PageNotFound";
 
 export default function SingleProduct() {
   const [HendleAddToCart] = useAddToCart();
-  const nagivate = useLocation()
-  const { ProLists } = useContext(DataContext);
-  const [item, setItem] = useState({
-    id: 24,
-    Title: "defaultTitle",
-    Image: "new8",
-    category: "new",
-    categorys: ["new"],
-    Amount: 500,
-  })
 
+  const { ProLists } = useContext(DataContext);
+  const [item, setItem] = useState({})
+  const { id } = useParams()
+  
   useEffect(() => {
-    const item = ProLists.find((item) => { return item.id === nagivate.state.id })
-    setItem(item)
-  }, [nagivate, ProLists])
+    async function fatchProduct() {
+      const item = await ProLists.find((item) => { return item.id === Number.parseInt(id) })
+      setItem(item)
+    }
+    fatchProduct()
+  }, [ProLists, id])
+
+  if (!item) {
+    return <PageNotFound Page_Type="Product" />;
+  }
+
 
   return (
     <section id="prodetails">
@@ -31,13 +32,17 @@ export default function SingleProduct() {
           src={item.Image}
           width="100%"
           id="MainImg"
-          alt="/"
+          alt={`ShopNow Product Number ${item.id}`}
         />
       </div>
       <div id="single-pro-desc">
-        <h6>Home / T-shirt</h6>
-        <h4 id="about">About</h4>
-        <h2 id="MainPrice"> &#8377;{item.Amount}</h2>
+        <p>Shop &gt;
+          {[item.categorys].map((catg) => {
+            return ` ${catg}`
+          })} &gt; {item.Title}
+        </p>
+        <h4 id="about">About Product</h4>
+        <h4 id="MainPrice"> &#8377;{item.Amount}</h4>
         {/* <select>
           <option>Select Size</option>
           <option>XL</option>
@@ -50,7 +55,9 @@ export default function SingleProduct() {
           defaultValue={1}
           name="ProQuantity"
           id="ProQuantity"
-        /> */}
+        />  */}
+        <h2>{item.Title}</h2>
+        <p className="sort-desc">{item.Short_Description ? item.Short_Description : "Short Description not available"}</p>
         <button
           onClick={() => {
             HendleAddToCart(item.id);
@@ -58,8 +65,6 @@ export default function SingleProduct() {
         >
           Add To Cart
         </button>
-        <h4>{item.Title}</h4>
-        {/* <span>{JSON.parse(localStorage.targetItem).Description}</span> */}
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./Components/Main/NavBar";
 import News from "./Components/Main/News";
@@ -14,30 +14,23 @@ import Copyright from "./Components/Main/Copyright";
 import { DataProvider } from "./Context/DataContext";
 import { CartData } from "./Context/CartData";
 import { BlogData } from "./Context/BlogData";
+import PageNotFound from "./Components/Main/PageNotFound";
 
 function App() {
-  const [targetId, setTargetId] = useState(0);
-
   return (
     <BlogData>
       <CartData>
         <DataProvider>
           <NavBar />
           <Routes>
-            <Route
-              exact
-              path="/"
-              element={<Home setTargetId={setTargetId} />}
-            />
-            <Route path="/Shop" element={<Shop setTargetId={setTargetId} />} />
+            <Route exact path="/" element={<Home />} />
+            <Route path="/*" element={<PageNotFound />} />
+            <Route path="/Shop" element={<Shop />} />
             <Route path="/Blogs" element={<Blog />} />
             <Route path="/About" element={<About />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Cart" element={<Cart />} />
-            <Route
-              path="/SingleProduct"
-              element={<SingleProduct targetId={targetId} />}
-            />
+            <Route path="/product/:id" Component={SingleProduct} />
           </Routes>
           <News />
           <Footer />

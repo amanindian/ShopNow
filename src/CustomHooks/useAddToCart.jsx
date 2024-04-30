@@ -40,11 +40,13 @@ export default function useAddToCart() {
     });
   };
 
-  const singleProductNavigation = useNavigate()
+  const navigate = useNavigate()
   //For Showing Single product
   const ShowProduct = (targetId) => {
-    singleProductNavigation(`/SingleProduct`, { state: { id: targetId } })
+    navigate(`/product/${targetId}`);
   };
+
+
 
   const IncriseQuantity = (targetId) => {
     const newCartProduct = [...CartProduct];
